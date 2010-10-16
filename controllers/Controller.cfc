@@ -4,4 +4,9 @@
 	Do not delete this file.
 --->
 <cfcomponent extends="Wheels">
+	<cffunction name="checkLogin">
+		<cfif NOT structKeyExists(session, "user") OR NOT IsDefined("session.user")>
+			<cfset redirectTo(controller="main", action="login")/>
+		</cfif>
+	</cffunction>
 </cfcomponent>
