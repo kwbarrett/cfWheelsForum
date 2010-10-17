@@ -1,0 +1,12 @@
+.posts{
+	border: 1px #00C solid;
+	border-collapse: collapse;}
+
+.posts {
+	border:1px #0000CC solid; border-collapse: collapse; }
+.posts h3 {
+	padding:0; margin:0; color:#000099 }
+.posts td {
+	border:1px #0000CC solid; padding:5px }
+.small {
+font-size:12px }
