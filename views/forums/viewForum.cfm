@@ -3,7 +3,7 @@
 <cfoutput>
 	<h2>#forumInfo.forumName#</h2>
 	<a href="index.cfm">Home</a> &gt; #forumInfo.forumName#<br/><!--- Display the breadcrumbs from the start --->
-	<div align="center">[<!--- <a href="newtopic.cfm?f=#url.f#">New thread</a> --->  #linkTo(text="New thread", controller="threads", action="new", params="forumID=#params.key#")#]</div>
+	<div align="center">[#linkTo(text="New thread", controller="threads", action="new", params="forumID=#params.key#")#]</div>
 </cfoutput>
 
 <table width="100%">
