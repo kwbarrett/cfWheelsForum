@@ -1,5 +1,5 @@
 <cfparam name="forums" default=""/>
-
+<h2>Welcome to MyForum</h2>
 <table width="100%">
 	<thead>
 		<tr bgcolor="#ffd579">
