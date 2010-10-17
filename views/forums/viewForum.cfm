@@ -24,7 +24,7 @@
 					<strong>#currentRow#</strong>
 				</td>
 				<td>
-					<cfif isSticky>Sticky: </cfif><a href="viewtopic.cfm?t=#id#">#threadTitle#</a> 
+					<cfif isSticky>Sticky: </cfif>#linkTo(text="#threadTitle#", controller="threads", action="viewThread", key="#id#")#<!--- <a href="viewtopic.cfm?t=#id#">#threadTitle#</a> ---> 
 					<cfif structKeyExists(session, 'userID') AND (session.userID EQ userID OR role.role EQ 2)>
 						[<a href="edittopic.cfm?t=#id#">Edit</a>]
 					</cfif>
