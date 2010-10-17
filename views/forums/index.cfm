@@ -13,7 +13,7 @@
 			<!--- Here we are outputting the forums query.  The forums query will return every forum with a post count --->
 			<tr height="35" <cfif currentRow MOD 2>bgcolor="##ebebeb"</cfif>>
 				<td>
-					#linkTo(text="#forumName#", controller="forums", action="view", key="#id#")#
+					#linkTo(text="#forumName#", controller="forums", action="viewForum", key="#id#")#
 				</td>
 				<td>#forumDescription#</td>
 				<td align="center">#val(total)#</td>
