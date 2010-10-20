@@ -1,15 +1,16 @@
 <cfparam name="thread" default=""/>
 <cfparam name="post" default=""/>
 <h2>Start a thread</h2>
-<cfdump var="#thread#">
+
 <cfoutput>
+	#flash("error")#
+	
+	#errorMessagesFor(objectName="thread")#
+	
 	#startFormTag(controller="threads", action="create", params="forumID=#params.forumID#")#
-	#hiddenField(objectName="thread", property="userid")#
-	#hiddenField(objectName="post", property="userid")#
-	#textField(label="Subject: ", objectName="thread", property="threadTitle")#<br/>
-	#textArea(label="", objectName="post", property="postBody", cols="56", rows="8")#<br/>
+	#textField(label="Subject: ", objectName="thread", property="threadTitle", size="50")#<br/>
+	#textArea(label="", objectName="post", property="postBody", cols="50", rows="5", class="ckeditor")#<br/>
 	#checkBox(label="Sticky", objectName="thread", property="isSticky", checkedValue="1", uncheckedValue="0")#<br/>
-	#submitTag("Reply")#
+	#submitTag("Post")#
 	#endFormTag()#
-	#buttonTo(text="Back", action="viewForum", controller="forums", key=params.forumID)#
 </cfoutput>
