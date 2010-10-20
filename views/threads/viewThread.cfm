@@ -1,9 +1,11 @@
 <cfoutput>
 	#includePartial("threadBreadcrumbs")#
 </cfoutput>
+
 <p>
 <cfoutput>
-	[#linkTo(text="Reply", controller="posts", action="newPost", params="threadID=#params.key#")#]
+	<p>#flash("success")#</p>
+	#buttonTo(text="Post Reply", controller="posts", action="newPost", params="threadID=#params.key#")#
 </cfoutput>
 </p>
 <p>
@@ -13,9 +15,8 @@
 			<tr>
 				<td width="200">
 					<h3>#userName#</h3>
-					<cfif role EQ 2>Moderator <cfelse> Junior Member</cfif><br/>
-					Posts: #numPosts#<br/>
-					Joined: #DateFormat(joinDate, "m/d/yyyy")#
+					#rolename#<br/>
+					<b>Joined:</b> #DateFormat(createdat, "d mmm yyyy")#
 				</td>
 				<td valign="top">
 					#postBody#
@@ -33,5 +34,8 @@
 				</td>
 			</tr>
 		</table>
+	</cfoutput>
+	<cfoutput>
+		#paginationLinks(route="threadWithPageNum", key=params.key)#
 	</cfoutput>
 </p>
