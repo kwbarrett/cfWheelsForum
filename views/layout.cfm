@@ -4,7 +4,10 @@
 <!--- Display the header of our design --->
 <html>
 	<head>
-		<cfoutput>#styleSheetLinkTag("styles")#</cfoutput>
+		<cfoutput>
+			#styleSheetLinkTag("styles")#
+			#javascriptIncludeTag("ckeditor/ckeditor")#
+		</cfoutput>
 		<title><cfoutput>#attributes.title#</cfoutput></title>
 	</head>
 	<body>
