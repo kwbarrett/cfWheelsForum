@@ -16,3 +16,11 @@
 	<cfset set(URLRewriting="Partial")>
 --->
 <cfset set(URLRewriting="Partial")>
+
+<!--- form helpers --->
+<cfset set(functionName="textField", labelPlacement="before", prependToLabel="<div>", append="</div>", appendToLabel="<br/>")/>
+<cfset set(functionName="passwordField", labelPlacement="before", prependToLabel="<div>", append="</div>", appendToLabel="<br/>")/>
+<cfset set(functionName="radioButton", labelPlacement="after", prepend="<div>", appendToLabel="</div>")/>
+<cfset set(functionName="checkBox", labelPlacement="after", prepend="<div>", appendToLabel="</div>")/>
+<cfset set(functionName="select", labelPlacement="before", prependToLabel="<div>", append="</div>", appendToLabel="<br/>")/>
+<cfset set(functionName="textarea", labelPlacement="before", prependToLabel="<div>", append="</div>", appendToLabel="<br/>")/>
