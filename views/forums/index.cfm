@@ -1,5 +1,8 @@
 <cfparam name="forums" default=""/>
 <h2>Welcome to MyForum</h2>
+<cfoutput>
+	#buttonTo(text="New Forum", controller="forums", action="new")#
+</cfoutput>
 <table width="100%">
 	<thead>
 		<tr bgcolor="#ffd579">
